@@ -39,6 +39,7 @@ describe('Search for a particular property in the house prices search and confir
     it('Save a search for property within 15 minutes drive of SE1 2LH.', function () {
         cy.get(searchModule.elements.login).first().click()
         cy.auto_login()
+<<<<<<< HEAD
         cy.get(searchModule.elements.headerMenu.toRentTravelTime).click({ force: true })
         cy.get(searchModule.elements.searchModal.location).type('SE1 2LH')
         cy.get(searchModule.elements.searchModal.duration).select('900')
@@ -49,6 +50,18 @@ describe('Search for a particular property in the house prices search and confir
     it('Check that saved searches can be retrieved', function () {
         cy.get(searchModule.elements.searchModal.return).click()
 
+=======
+        cy.get(search.elements.headerMenu.toRentTravelTime).click({ force: true })
+        cy.get(search.elements.searchModal.location).type('SE1 2LH')
+        cy.get(search.elements.searchModal.duration).select('900')
+        cy.get(search.elements.searchModal.transport).select('driving')
+        cy.get(search.elements.searchModal.searchSubmit).click()        
+    })
+    
+     it('Save a search result.' , function() {
+        cy.get(search.elements.saveSearch).click()        
+        cy.get(search.elements.searchModal.return).click()
+>>>>>>> 58e2469666450df2af4c928f1b0d82c37822d33b
     })
 })
 
