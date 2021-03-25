@@ -1,0 +1,24 @@
+{
+  "name": "paresh-solanki",
+  "version": "1.0.0",
+  "description": "Zoopla Test",
+  "main": "index.js",
+  "dependencies": {
+    "cypress": "^6.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "./node_modules/.bin/cypress run --spec cypress/integration/test.spec.js --browser chrome --headless",
+    "open": "./node_modules/.bin/cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zoopla/Paresh-Solanki.git"
+  },
+  "author": "Paresh Solanki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zoopla/Paresh-Solanki/issues"
+  },
+  "homepage": "https://github.com/zoopla/Paresh-Solanki#readme"
+}
