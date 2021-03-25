@@ -26,12 +26,11 @@
 
 
 Cypress.Commands.add('auto_login', (email = 'andreitishchenko777@gmail.com', password = 'test12345') => {
-	
-
     cy.get('#signin_email').type(email)
     cy.get('#signin_password').type(password)
     cy.get('#signin_submit').click()
 })
+
 Cypress.Commands.add('signup', () => {
 	cy.get('.register-link a').click()
 	const user = generateRandomNewUser();
@@ -40,6 +39,7 @@ Cypress.Commands.add('signup', () => {
     cy.get('[data-testid=label-consent__insights__24-yes]').click()
     cy.get('[data-testid=register-button]').click()
 })
+
 function generateRandomNewUser() {
 	var user = [];
 

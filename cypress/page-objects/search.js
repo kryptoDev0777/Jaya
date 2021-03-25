@@ -25,6 +25,7 @@ module.exports = {
         signIn: '[data-testid=register-page-header-sign-in-link]',
         login: '[data-testid=header-profile-sign-in]',
         searchResultCount: '[data-testid=total-results]',
-        acceptCookie: '.ui-cookie-consent-choose__buttons > .ui-button-primary'
+        acceptCookie: '.ui-cookie-consent-choose__buttons > .ui-button-primary',
+        alertFrequency: '.js-myaccount-alert-frequency',
     }
 } 
