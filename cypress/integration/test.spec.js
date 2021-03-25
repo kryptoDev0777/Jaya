@@ -45,12 +45,10 @@ describe('Search for a particular property in the house prices search and confir
         cy.get(searchModule.elements.sModal.duration).select('900')
         cy.get(searchModule.elements.sModal.transport).select('driving')
         cy.get(searchModule.elements.sModal.searchSubmit).click()
-               
-    })
-    it('Check that saved searches can be retrieved', function () {
+        // save search result
         cy.get(searchModule.elements.saveSearch).click() 
-        cy.get(searchModule.elements.sModal.return).click()
-
+        cy.get(searchModule.elements.sModal.return).click() 
     })
+   
 })
 
