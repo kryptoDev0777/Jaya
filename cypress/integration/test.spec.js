@@ -42,7 +42,10 @@ describe('Search results', function () {
         cy.get(search.elements.searchModal.location).type('SE1 2LH')
         cy.get(search.elements.searchModal.duration).select('900')
         cy.get(search.elements.searchModal.transport).select('driving')
-        cy.get(search.elements.searchModal.searchSubmit).click()
+        cy.get(search.elements.searchModal.searchSubmit).click()        
+    })
+    
+     it('Save a search result.' , function() {
         cy.get(search.elements.saveSearch).click()        
         cy.get(search.elements.searchModal.return).click()
     })
