@@ -58,7 +58,7 @@ describe('Saved search results', function () {
         cy.get(searchModule.elements.login).first().click()
         cy.auto_login()
         cy.get(searchModule.elements.headerMenu.alertandSearch).first().click({ force: true })
-        cy.get(searchModule.elements.searchResult).click()
+        cy.get(searchModule.elements.searchResult).last().click()
         cy.get(searchModule.elements.tab_to_rent).click()
     })
 })
