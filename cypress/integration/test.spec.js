@@ -20,11 +20,11 @@ describe("Register for daily email updates on rental property and change the fre
         cy.get(searchModule.elements.sModal.bedrooms).select('1')
         cy.get(searchModule.elements.sModal.searchSubmit).click() 
         cy.get(searchModule.elements.saveSearch).click()  
-        cy.get(searchModule.elements.sModal.manage).click()  
-    })
-    it('Change the frequency of an existing email update', function(){
+        cy.get(searchModule.elements.sModal.manage).click()
+        //Change the frequency of an existing email update  
         cy.get(searchModule.elements.alertFrequency).last().select("3")
     })
+   
 })
 
 describe('Search for a particular property in the house prices search and confirm that it appears as the first result', function () {
@@ -50,5 +50,15 @@ describe('Search for a particular property in the house prices search and confir
         cy.get(searchModule.elements.sModal.return).click() 
     })
    
+
 })
 
+describe('Saved search results', function () {
+    it('Check that saved searches can be retrieved', function () {
+        cy.get(searchModule.elements.login).first().click()
+        cy.auto_login()
+        cy.get(searchModule.elements.headerMenu.alertandSearch).first().click({ force: true })
+        cy.get(searchModule.elements.searchResult).click()
+        cy.get(searchModule.elements.tab_to_rent).click()
+    })
+})
