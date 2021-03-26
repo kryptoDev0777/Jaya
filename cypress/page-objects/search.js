@@ -25,7 +25,7 @@ module.exports = {
         searchResultCount: '[data-testid=total-results]',
         acceptCookie: '.ui-cookie-consent-choose__buttons > .ui-button-primary',
         alertFrequency: '.js-myaccount-alert-frequency',
-        searchResult: '#ui-id-4',
+        searchResult: '#tab-residential > ul > li',
         tab_to_rent: '#tab-residential-to-rent > div:nth-child(2) > form > div:nth-child(5) > div > a:nth-child(1)', 
     }
 } 
